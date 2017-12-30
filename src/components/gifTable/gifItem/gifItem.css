@@ -1,0 +1,15 @@
+.gifItem {
+  padding: 10px;
+}
+
+.gifItem .img-item {
+  height: 100px;
+  display: block;
+  margin: auto;
+}
+
+.gifItem .fav-button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}

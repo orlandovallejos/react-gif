@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import { Layout, Menu, Icon } from 'antd';
-import './App.css';
+import React, { Component } from "react";
+import { Layout, Menu, Icon } from "antd";
+import SearchBox from "./components/searchBox/searchBox";
+import GifTable from "./components/gifTable/gifTable";
+import "./App.css";
 
 const { Header, Content, Footer, Sider } = Layout;
-
 
 class App extends Component {
   render() {
@@ -12,10 +13,12 @@ class App extends Component {
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
-          onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+          onCollapse={(collapsed, type) => {
+            console.log(collapsed, type);
+          }}
         >
           <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+          <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
             <Menu.Item key="1">
               <Icon type="user" />
               <span className="nav-text">Home</span>
@@ -27,13 +30,16 @@ class App extends Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} />
-          <Content style={{ margin: '24px 16px 0' }}>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              content
+          <Header style={{ background: "#fff", padding: 0 }}>
+            <h1 style={{ padding: "10px" }}>Giphy finder</h1>
+          </Header>
+          <Content style={{ margin: "24px 16px 0" }}>
+            <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
+              <SearchBox />
+              <GifTable />
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>
+          <Footer style={{ textAlign: "center" }}>
             Ant Design ©2016 Created by Ant UED
           </Footer>
         </Layout>
