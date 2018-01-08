@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Layout, Menu, Icon } from "antd";
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
-import Home from "./containers/Home";
-import Favourite from "./containers/Favourite";
+import Home from "./containers/Home/Home";
+import Favourite from "./containers/Favourite/Favourite";
 import "./App.css";
 
 const { Header, Footer, Sider } = Layout;
