@@ -8,8 +8,8 @@ const SearchBox = (props) => {
       <h3>Search funny gifs</h3>
       <Search
         placeholder="input search text"
-        onSearch={value => console.log(value)}
-        enterButton
+        onSearch={props.search}
+        enterButton={true}
       />
     </div>
   );

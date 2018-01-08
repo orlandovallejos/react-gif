@@ -5,8 +5,15 @@ const instance = axios.create({
   baseURL: "http://api.giphy.com/"
 });
 
-export default instance;
-
-export const getTrending = () => {
+const getTrending = () => {
   return instance.get("/v1/gifs/trending?api_key=" + API_KEY);
+};
+
+const search = query => {
+  return instance.get("/v1/gifs/search?api_key=" + API_KEY + "&q=" + query);
+};
+
+export const api = {
+  getTrending: getTrending,
+  search: search
 };
