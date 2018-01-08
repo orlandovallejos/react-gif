@@ -8,7 +8,6 @@ class GifItem extends Component {
   };
 
   componentDidMount() {
-    
     let myFavs = window.localStorage.getItem("items");
     if (myFavs) {
       myFavs = JSON.parse(myFavs);
