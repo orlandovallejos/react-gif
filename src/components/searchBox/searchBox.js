@@ -7,7 +7,7 @@ const SearchBox = (props) => {
     <div>
       <h3>Search funny gifs</h3>
       <Search
-        placeholder="input search text"
+        placeholder="Search the gifs from the future"
         onSearch={props.search}
         enterButton={true}
       />

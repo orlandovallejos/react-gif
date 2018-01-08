@@ -13,9 +13,10 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    api.getTrending()
+    api
+      .getTrending()
       .then(response => {
-        console.log(response);
+        // console.log(response);
         var items = response.data.data.map(item => {
           return {
             url: item.images["fixed_height"].url,
@@ -29,12 +30,11 @@ class Home extends Component {
       });
   }
 
-  componentDidUpdate() {
-    
-  }
+  componentDidUpdate() {}
 
-  searchHandler = (text) => {
-    api.search(text)
+  searchHandler = text => {
+    api
+      .search(text)
       .then(response => {
         // console.log(response);
         var items = response.data.data.map(item => {
@@ -48,12 +48,14 @@ class Home extends Component {
       .catch(error => {
         console.log(error);
       });
-  }
+  };
 
   render() {
     let results = null;
     if (this.state.searchItems.length > 0) {
-      results = <GifTable items={this.state.searchItems} />;
+      results = (
+        <GifTable items={this.state.searchItems} />
+      );
     } else {
       results = <GifTable items={this.state.trendingItems} />;
     }

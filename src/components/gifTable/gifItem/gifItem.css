@@ -14,3 +14,7 @@
   margin: auto;
   margin-top: 10px;
 }
+
+.gifItem .fav-button.is-fav i.anticon {
+  color: red;
+}
